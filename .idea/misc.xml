@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/drawable/gradient_2.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/drawable/gradient_3.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.290625" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.4166666666666667" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.4166666666666667" />
       </map>
     </option>
   </component>

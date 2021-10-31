@@ -5,53 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:layout_margin="8dp"
-    android:id="@+id/mainLayout"
-    android:background="@drawable/gradient_list">
+    android:layout_margin="8dp">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/refresh_24"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="26dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:backgroundTint="@color/white"
-        android:tint="#ffff"
-        app:rippleColor="#ffff" />
-
-
-    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
-        android:id="@+id/dotLoader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:layout_marginTop="30dp"
-        app:lazyloader_animDur="400"
-        app:lazyloader_dotsDist="10dp"
-        app:lazyloader_dotsRadius="10dp"
-        app:lazyloader_firstDelayDur="150"
-        app:lazyloader_firstDotColor="@color/white"
-        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
-        app:lazyloader_secondDelayDur="300"
-        app:lazyloader_secondDotColor="@color/white"
-        app:lazyloader_thirdDotColor="@color/white" />
-
-
-
-    <ImageView
-        android:id="@+id/imageView"
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:layout_centerInParent="true"
-        android:scaleType="fitCenter"
-        android:layout_margin="0dp"/>
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph"
+        />
+
+
+
+
+
 </RelativeLayout>
