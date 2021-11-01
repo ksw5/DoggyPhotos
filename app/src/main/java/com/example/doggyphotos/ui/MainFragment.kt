@@ -14,9 +14,11 @@ import com.example.doggyphotos.models.MainViewModel
 import com.example.doggyphotos.databinding.FragmentMainBinding
 
 
-class MainFragment : Fragment() {
+
+
+open class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
     private val viewModel: MainViewModel by activityViewModels()
 
 

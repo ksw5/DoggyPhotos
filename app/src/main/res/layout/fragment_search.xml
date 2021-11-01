@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,12 +22,13 @@
             android:layout_width="303dp"
             android:layout_height="46dp"
             android:hint="Ex. Poodle"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/searchBreedBtn"
-            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintHorizontal_bias="0.673"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/white"/>
+            app:layout_constraintVertical_bias="0.461" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/searchBreedBtn"
@@ -44,6 +45,22 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/dotLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        app:lazyloader_animDur="400"
+        app:lazyloader_dotsDist="10dp"
+        app:lazyloader_dotsRadius="10dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="@color/white"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="@color/white"
+        app:lazyloader_thirdDotColor="@color/white" />
+
     <ImageView
         android:id="@+id/imageViewSearch"
         android:layout_width="match_parent"
@@ -52,4 +69,4 @@
         android:layout_centerInParent="true" />
 
 
-</LinearLayout>
+</RelativeLayout>

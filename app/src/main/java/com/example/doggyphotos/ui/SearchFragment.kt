@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
-import com.example.doggyphotos.R
 import com.example.doggyphotos.databinding.FragmentMainBinding
 import com.example.doggyphotos.databinding.FragmentSearchBinding
 import com.example.doggyphotos.models.MainViewModel
+import com.example.doggyphotos.utils.hideKeyboard
 
 
 class SearchFragment : Fragment() {
@@ -32,6 +32,7 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         breedImage()
 
 
@@ -50,10 +51,16 @@ class SearchFragment : Fragment() {
                         .circleCrop()
                         .into(binding.imageViewSearch)
             })
+            hideKeyboard()
         }
+
     }
 
 
 
+
+
 }
+
+
 
