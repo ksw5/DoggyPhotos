@@ -41,6 +41,7 @@ The application is built using Single-Activity Architecture with multiple fragme
 - [Glide](https://github.com/bumptech/glide) - Image loading
 - [Moshi](https://github.com/square/moshi) - JSON deserialization
 - [Retrofit 2](https://square.github.io/retrofit/) - REST API access
+- [Dot Loader](https://github.com/bhargavms/DotLoader) - Loading animation
 
 ## Demo
 
