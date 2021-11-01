@@ -1,4 +1,4 @@
-package com.example.doggyphotos
+package com.example.doggyphotos.ui
 
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
@@ -8,23 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.example.doggyphotos.models.MainViewModel
 import com.example.doggyphotos.databinding.FragmentMainBinding
-import java.util.Optional.of
-import java.util.Set.of
 
 
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private val viewModel: MainViewModel by activityViewModels()
-
-
-
 
 
     override fun onCreateView(
@@ -43,7 +36,6 @@ class MainFragment : Fragment() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         backgroundAnimation()
         callDogPhoto()
-        val action =
 
         binding.fab.setOnClickListener {
             binding.fab.animate().apply {
@@ -76,7 +68,7 @@ class MainFragment : Fragment() {
 
 
 
-    private fun backgroundAnimation() {
+    fun backgroundAnimation() {
         val animationDrawable: AnimationDrawable = binding.mainLayout.background as AnimationDrawable
 
         animationDrawable.apply {

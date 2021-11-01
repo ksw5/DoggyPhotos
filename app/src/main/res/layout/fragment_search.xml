@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SearchFragment"
-    android:layout_margin="8dp"
+    tools:context=".ui.SearchFragment"
+
     android:id="@+id/fragmentLayout"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradient_list">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,27 +19,37 @@
 
         <EditText
             android:id="@+id/userSearch"
-            android:layout_width="335dp"
-            android:layout_height="52dp"
+            android:layout_width="303dp"
+            android:layout_height="46dp"
             android:hint="Ex. Poodle"
-
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
-            app:layout_constraintHorizontal_bias="0.004"
+            app:layout_constraintEnd_toStartOf="@+id/searchBreedBtn"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.545" />
+            android:textColor="@color/white"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="42dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/searchBreedBtn"
+            android:layout_width="62dp"
+            android:layout_height="54dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/search_24"
+            app:backgroundTint="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:layout_centerInParent="true" />
 
 
 </LinearLayout>

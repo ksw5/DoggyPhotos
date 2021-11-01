@@ -1,4 +1,4 @@
-package com.example.doggyphotos
+package com.example.doggyphotos.models
 
 import android.app.Activity
 import android.content.Context
@@ -25,6 +25,12 @@ class MainViewModel  : ViewModel(){
     fun getNewDog() {
         viewModelScope.launch {
             _apiResponse.value = DogApi.retrofitService.getRandomDog()
+        }
+    }
+
+    fun getUserBreed(breed: String?) {
+        viewModelScope.launch {
+            _apiResponse.value = DogApi.retrofitService.getRandomDogImageByBreed(breed!!)
         }
     }
 }
